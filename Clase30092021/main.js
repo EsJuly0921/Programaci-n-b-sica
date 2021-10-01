@@ -34,22 +34,14 @@ for (let index = 0; index < imagenes.length; index++) {
     document.write(template + '<br>');
 }*/
 
-var preguntas = [
-    '¿Cuál es tu nombre?',
-    '¿Cuál es tu edad?',
-    '¿Cuál es tu ciudad de origen?',
-    '¿Cuál es tu profesión?',
-    '¿Cuál es tu estado civil?',
-];
+var preguntas = [ '¿Cuál es tu nombre?', '¿Cuál es tu edad?', '¿Cuál es tu ciudad de origen?', '¿Cuál es tu profesión?', '¿Cuál es tu estado civil?',];
 
-var respuestas = [
-    prompt('¿Cuál es tu nombre?'),
-    prompt('¿Cuál es tu edad?'),
-    prompt('¿Cuál es tu ciudad de origen?'),
-    prompt('¿Cuál es tu profesión?'),
-    prompt('¿Cuál es tu estado civil?'),
-];
+var respuestas = [];
 
 for (let index = 0; index < preguntas.length; index++) {
+      respuestas[index] = prompt(preguntas[index])
+};
+
+for (let index = 0; index < respuestas.length; index++) {
     document.write(preguntas[index] + ' ' + respuestas[index] + '<br>');
 };
